@@ -5,7 +5,7 @@
     categories
  */
 
-package hangman;
+package hangman2;
 
 /**
  *
@@ -13,7 +13,7 @@ package hangman;
  */
 
 import javax.swing.*;
-public class Hangman {
+public class Hangman2 {
 
     /**
      * @param args the command line arguments
@@ -27,14 +27,32 @@ public class Hangman {
        String[] foods = {"Pizza", "Yogurt", "Apple", "Lasagna"};
        String[][] categories = {shows, videoGames, sportsTeams, animals, foods};
        
-       int randomCategory = (int)(Math.random() * categories.length -1);
-       int randomSelection = (int)(Math.random() * randomCategory);
-       
-        // create a boolean condition if the guess is false of corect
-        for (int numGuesses = 7; numGuesses > 0; numGuesses--) { // updates the number of guess
-            // if the guess is wrong, decrease the number of guesses
+        for (int numGuesses = 7; numGuesses > 0; numGuesses--) {
+        
             String guess = JOptionPane.showInputDialog("Number of remaining guesses: " +(numGuesses)
-                    + " \n Guess a Letter:");
+        + " \n Guess a Letter:");
+            for (int i = 0; i< categories.length; i++) { // iterates over categories array
+                
+                int randomCategory = (int)(Math.random() * categories.length -1);
+                int randomSelection = (int)(Math.random() * randomCategory);
+                String dash = "-";
+                for (int j = 0; j < categories[i].length; j++) {  //iterates over the elements in the specific category
+                    
+                    if(!categories[i][j].equals("")) { // probably wrong
+                        System.out.println("-");
+                    }
+                    else {
+                        System.out.println("");
+                    }
+                    
+                    if(categories[i][j].equals(guess.charAt(j))) {  //Could change to the math random int function above
+                        
+               
+                    }
+                
+                }
+            }
+            
         }
         
     }
