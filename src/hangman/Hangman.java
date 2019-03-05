@@ -5,13 +5,15 @@
     categories
  */
 
-package hangman2;
+package hangman;
 
 /**
  *
  * @author malud0519
  */
-public class Hangman2 {
+
+import javax.swing.*;
+public class Hangman {
 
     /**
      * @param args the command line arguments
@@ -24,7 +26,21 @@ public class Hangman2 {
        String[] animals = {"Dog", "Cat", "Horse", "Moose"};
        String[] foods = {"Pizza", "Yogurt", "Apple", "Lasagna"};
        String[][] categories = {shows, videoGames, sportsTeams, animals, foods};
-         
+       
+       int randomCategory = (int)(Math.random() * categories.length -1);
+       int randomSelection = (int)(Math.random() * randomCategory);
+       
+        // create a boolean condition if the guess is false of corect
+        for (int numGuesses = 7; numGuesses > 0; numGuesses--) { // updates the number of guess
+            // if the guess is wrong, decrease the number of guesses
+            String guess = JOptionPane.showInputDialog("Number of remaining guesses: " +(numGuesses)
+                    + " \n Guess a Letter:");
+        }
+        
     }
     
 }
+/*
+Displaying dashes for the string arrays:
+use if(charAt(i) == '') function
+*/
