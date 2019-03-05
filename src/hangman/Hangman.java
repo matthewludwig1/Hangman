@@ -47,7 +47,6 @@ public class Hangman2 {
                     
                     if(categories[i][j].equals(guess.charAt(j))) {  //Could change to the math random int function above
                         
-               
                     }
                 
                 }
