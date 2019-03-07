@@ -5,7 +5,7 @@
     categories
  */
 
-package hangman2;
+package hangman;
 
 /**
  *
@@ -13,7 +13,7 @@ package hangman2;
  */
 
 import javax.swing.*;
-public class Hangman2 {
+public class Hangman {
 
     /**
      * @param args the command line arguments
@@ -31,33 +31,19 @@ public class Hangman2 {
         
             String guess = JOptionPane.showInputDialog("Number of remaining guesses: " +(numGuesses)
         + " \n Guess a Letter:");
-            for (int i = 0; i< categories.length; i++) { // iterates over categories array
-                
-                int randomCategory = (int)(Math.random() * categories.length -1);
-                int randomSelection = (int)(Math.random() * randomCategory);
-                String dash = "-";
-                for (int j = 0; j < categories[i].length; j++) {  //iterates over the elements in the specific category
-                    
-                    if(!categories[i][j].equals("")) { // probably wrong
-                        System.out.println("-");
-                    }
-                    else {
-                        System.out.println("");
-                    }
-                    
-                    if(categories[i][j].equals(guess.charAt(j))) {  //Could change to the math random int function above
-                        
-                    }
-                
-                }
-            }
-            
-        }
-        
-    }
-    
+        } 
+    }   
 }
+/*
+TO DO:
+Replace spaces with hyphens
+if the character is guessed correctly, show the letter on the screen
+else if the character is guessed incorrectly, display another part of the body.
+    Also decrement the number of guesses remaining
+*/
+
+
 /*
 Displaying dashes for the string arrays:
 use if(charAt(i) == '') function
-*/
+*
