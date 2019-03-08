@@ -5,7 +5,7 @@
     categories
  */
 
-package hangman2;
+package hangman;
 
 /**
  *
@@ -13,7 +13,7 @@ package hangman2;
  */
 
 import javax.swing.*;
-public class Hangman2 {
+public class Hangman {
 
     /**
      * @param args the command line arguments
