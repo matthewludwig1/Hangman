@@ -1,6 +1,6 @@
 /*
     Matthew Ludwig
-    7 March 2019
+    8 March 2019
     This program compares the users guess to a radomly selected phrase in various
     categories
  */
@@ -28,25 +28,33 @@ public class Hangman {
        String[] animals = {"Dog", "Cat", "Horse", "Moose"};
        String[] foods = {"Pizza", "Yogurt", "Apple", "Lasagna"};
        String[][] categories = {shows, videoGames, sportsTeams, animals, foods};
-       int randomWord = (int)Math.random()* categories.length -1;
-       System.out.println("Category: ");
+      
+       String category = categories[(int)Math.random()][(int)Math.random()];
+       String word = categories[Integer.parseInt(category)][(int)Math.random()];
+       System.out.println("Category: " + category);
        System.out.println("Number of Words: ");
        
-       for (int i = 0; i < categories.length; i++) { // display hyphens (does not work)
-           for (int j = 0; j < categories[i].length; i++ ) {
-               if (categories[i][j].charAt(i)== ' ') {
-                   System.out.println(" ");
-               }
-               else {
-                   System.out.println("-"); 
-               }
-                   
-           }
+       String shownWord = " ";
+       for (int i = 0; i < categories.length; i++) { // display hyphens
+           shownWord += "-";
        }
+        System.out.println(shownWord); // only displays a fixed amount of hyphens
+       
        
       
-    }   
+
+       
+    }
 }
+/*
+TO DO:
+Replace spaces with hyphens
+if the character is guessed correctly, show the letter on the screen
+else if the character is guessed incorrectly, display another part of the body.
+    Also decrement the number of guesses remaining
+*/
+
+
 /*
 TO DO:
 if the character is guessed correctly, show the letter on the screen
