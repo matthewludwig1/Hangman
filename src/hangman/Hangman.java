@@ -39,21 +39,9 @@ public class Hangman {
            shownWord += "-";
        }
         System.out.println(shownWord); // only displays a fixed amount of hyphens
-       
-       
-      
 
-       
     }
 }
-/*
-TO DO:
-Replace spaces with hyphens
-if the character is guessed correctly, show the letter on the screen
-else if the character is guessed incorrectly, display another part of the body.
-    Also decrement the number of guesses remaining
-*/
-
 
 /*
 TO DO:
@@ -63,7 +51,3 @@ else if the character is guessed incorrectly, display another part of the body.
 */
 
 
-/*
-Displaying dashes for the string arrays:
-use if(charAt(i) == '') function
-*/
